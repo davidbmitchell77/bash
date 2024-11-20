@@ -8,7 +8,7 @@ for file in $dir1/*.cls; do
         echo -n -e "                                                         "
         echo -n -e "\rcomparing: $f"
         if [ -f "$dir2/$f" ]; then
-            diff $dir1/$f $dir2/$f > $dir3/$f.txt 2>&1
+            diff $dir1/$f $dir2/$f >$dir3/$f.txt 2>&1
             count=$((count + 2))
         fi
     fi
